@@ -1,2 +1,2 @@
-# TEAM-4-AMES
+# [PROJECT MASQUERADE]
 should go better than last time
