@@ -96,6 +96,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6827660022608033980}
+  - component: {fileID: 849690153210820985}
   m_Layer: 0
   m_Name: P.Character
   m_TagString: Untagged
@@ -119,3 +120,20 @@ Transform:
   - {fileID: 8155586672018135647}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &849690153210820985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7404015039164266783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0423adddbfd644686ff7228ca9abc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: Player
+  unitLevel: 5
+  damage: 30
+  maxHP: 155
+  currentHP: 155
