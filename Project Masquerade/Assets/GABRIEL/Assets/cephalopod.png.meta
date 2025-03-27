@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5bee11c5d4e4c89438ef3af96ac0a065
+guid: bf79b0f7af263c8408c5ebca2e42bf8d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5185649437945853404
-    second: health_0
+      213: -6282736791293852559
+    second: cephalopod_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: health_0
+      name: cephalopod_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1
-        height: 1
+        width: 213
+        height: 266
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42a88899f4fd808b0800000000000000
-      internalID: -5185649437945853404
+      spriteID: 17407a9fc2c3fc8a0800000000000000
+      internalID: -6282736791293852559
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      health_0: -5185649437945853404
+      cephalopod_0: -6282736791293852559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
