@@ -97,13 +97,26 @@ public class BattleSystem : MonoBehaviour
             dialougeText.text = "Lovley kill... Player.";
         } else if (state == BattleState.LOST)
         {
-            dialougeText.text = "Get up... Player. GET UP.";
+            dialougeText.text = "Get up... Player. GET UP!";
         }
     }
 
     void PlayerTurn()
     {
         dialougeText.text = "It's Your Turn... Player.";
+    }
+
+    IEnumerator PlayerHeal()
+    {
+        playerUnit.Heal(50);
+
+        playerHUD.SetHP(playerUnit.currentHP);
+        dialougeText.text = "Healed... NOW GIVE IT YOUR ALL!";
+
+        yield return new WaitForSeconds(2f); 
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
     }
 
     public void OnAttackButton()
@@ -113,4 +126,18 @@ public class BattleSystem : MonoBehaviour
 
         StartCoroutine(PlayerAttack());
     }
+
+    public void OnHealButton()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+
+        StartCoroutine(PlayerHeal());
+    }
+    public void OnBlockButton()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+    }
 }
+

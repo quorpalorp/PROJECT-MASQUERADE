@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Player
-  unitLevel: 5
-  damage: 30
-  maxHP: 150
-  currentHP: 150
+  unitLevel: 1
+  damage: 5
+  maxHP: 100
+  currentHP: 100
