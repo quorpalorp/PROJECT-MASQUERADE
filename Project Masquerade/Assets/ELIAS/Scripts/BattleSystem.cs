@@ -47,17 +47,20 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.PLAYERTURN;
         PlayerTurn();
     }
-
     IEnumerator PlayerAttack()
     {
-        bool isDead = enemyUnit.TakeDamage(playerUnit.damage); 
-        yield return new WaitForSeconds(2f);
+        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
 
-        if (isDead)
+        enemyHUD.SetHP(enemyUnit.currentHP);
+        dialougeText.text = "Nice attack... Player.";
+        yield return new WaitForSeconds(2f); 
+
+        if(isDead)
         {
             state = BattleState.WON;
             EndBattle();
-        } else
+        }
+        else
         {
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
@@ -66,19 +69,24 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
+        dialougeText.text = enemyUnit.unitName + " Turn to attack... ";
+
         yield return new WaitForSeconds(1f);
 
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
 
+        playerHUD.SetHP(playerUnit.currentHP);
+
         yield return new WaitForSeconds(1f);
 
-        if (isDead)
+        if(isDead)
         {
             state = BattleState.LOST;
+            EndBattle();
         } else
         {
             state = BattleState.PLAYERTURN;
-            PlayerTurn(); 
+            PlayerTurn();
         }
     }
 
@@ -86,16 +94,16 @@ public class BattleSystem : MonoBehaviour
     {
         if(state == BattleState.WON)
         {
-
+            dialougeText.text = "Lovley kill... Player.";
         } else if (state == BattleState.LOST)
         {
-
+            dialougeText.text = "Get up... Player. GET UP.";
         }
     }
 
     void PlayerTurn()
     {
-
+        dialougeText.text = "It's Your Turn... Player.";
     }
 
     public void OnAttackButton()
@@ -105,5 +113,4 @@ public class BattleSystem : MonoBehaviour
 
         StartCoroutine(PlayerAttack());
     }
-
 }
