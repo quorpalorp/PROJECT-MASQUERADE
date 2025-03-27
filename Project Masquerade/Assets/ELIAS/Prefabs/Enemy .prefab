@@ -135,5 +135,5 @@ MonoBehaviour:
   unitName: Enemy
   unitLevel: 5
   damage: 25
-  maxHP: 100
-  currentHP: 100
+  maxHP: 155
+  currentHP: 155
