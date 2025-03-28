@@ -119,6 +119,13 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(EnemyTurn());
     }
 
+    IEnumerator PlayerBlock()
+    {
+        playerUnit.Block(enemyUnit.damage);
+
+        yield return new WaitForSeconds(2f);
+    }
+    
     public void OnAttackButton()
     {
         if (state != BattleState.PLAYERTURN)
@@ -134,10 +141,13 @@ public class BattleSystem : MonoBehaviour
 
         StartCoroutine(PlayerHeal());
     }
+
     public void OnBlockButton()
     {
         if (state != BattleState.PLAYERTURN)
             return;
+
+        StartCoroutine(PlayerBlock());
     }
 }
 
