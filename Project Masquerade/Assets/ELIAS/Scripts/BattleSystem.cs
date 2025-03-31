@@ -76,6 +76,7 @@ public class BattleSystem : MonoBehaviour
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
 
         playerHUD.SetHP(playerUnit.currentHP);
+        playerUnit.ResetDefense();
 
         yield return new WaitForSeconds(1f);
 
@@ -121,9 +122,12 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerBlock()
     {
-        playerUnit.Block(enemyUnit.damage);
+        playerUnit.setdefense();
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
     }
     
     public void OnAttackButton()
