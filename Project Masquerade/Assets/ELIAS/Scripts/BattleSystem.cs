@@ -1,7 +1,4 @@
-using Assets.Scripts.Debuffs;
-using NUnit.Framework;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -133,34 +130,7 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(EnemyTurn());
     }
 
-    private List<Debuff> debuffs = new List<Debuff>();
-
-    private List<Debuff> newDebuffs = new List<Debuff>();
-
-    private List<Debuff> expiredDebuffs = new List<Debuff>();  
-
-    private void HandleBuffs()
-    {
-        if (debuffs.Count > 0)
-        {
-            foreach (Debuff debuff in debuffs)
-            {
-                debuff.Update();
-            }
-        }
-    }
-
-    public void ApplyDebuff(Debuff debuff)
-    {
-        this.debuffs.Add(debuff);
-    }
-
-    public void RemoveDebuff(Debuff debuff)
-    {
-        this.expiredDebuffs.Add(debuff);
-    }
-    
-    public void OnAttackButton()
+    public void OnAttackButton() 
     {
         if (state != BattleState.PLAYERTURN)
             return;
