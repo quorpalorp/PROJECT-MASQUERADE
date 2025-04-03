@@ -2,9 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleStateDONTUSE {  START, PLAYERTURN, ENEMYTURN, WON, LOST }
+public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
-public class BattleSystem : MonoBehaviour
+//this is the latest copy of the BattleSystem script by gabriel
+//dont use the one in elias's folder thats outdated
+public class BattleSystemFINAL : MonoBehaviour
 {
 
     public GameObject PCharacterPrefab;
@@ -19,15 +21,15 @@ public class BattleSystem : MonoBehaviour
     public Text dialougeText;
 
     public BattleHUD playerHUD;
-    public BattleHUD enemyHUD; 
+    public BattleHUD enemyHUD;
 
-    
-    public BattleState state; 
+
+    public BattleState state;
 
     void Start()
     {
         state = BattleState.START;
-        StartCoroutine(SetupBattle()); 
+        StartCoroutine(SetupBattle());
     }
 
     IEnumerator SetupBattle()
@@ -40,9 +42,9 @@ public class BattleSystem : MonoBehaviour
         dialougeText.text = enemyUnit.unitName + " Wants to kill you... ";
 
         playerHUD.SetHUD(playerUnit);
-        enemyHUD.SetHUD(enemyUnit); 
-       
-        yield return new WaitForSeconds(2f); 
+        enemyHUD.SetHUD(enemyUnit);
+
+        yield return new WaitForSeconds(2f);
 
         state = BattleState.PLAYERTURN;
         PlayerTurn();
@@ -53,9 +55,9 @@ public class BattleSystem : MonoBehaviour
 
         enemyHUD.SetHP(enemyUnit.currentHP);
         dialougeText.text = "Nice attack... Player.";
-        yield return new WaitForSeconds(2f); 
+        yield return new WaitForSeconds(2f);
 
-        if(isDead)
+        if (isDead)
         {
             state = BattleState.WON;
             EndBattle();
@@ -80,11 +82,12 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        if(isDead)
+        if (isDead)
         {
             state = BattleState.LOST;
             EndBattle();
-        } else
+        }
+        else
         {
             state = BattleState.PLAYERTURN;
             PlayerTurn();
@@ -93,10 +96,11 @@ public class BattleSystem : MonoBehaviour
 
     void EndBattle()
     {
-        if(state == BattleState.WON)
+        if (state == BattleState.WON)
         {
             dialougeText.text = "Lovley kill... Player.";
-        } else if (state == BattleState.LOST)
+        }
+        else if (state == BattleState.LOST)
         {
             dialougeText.text = "Get up... Player. GET UP!";
         }
@@ -114,7 +118,7 @@ public class BattleSystem : MonoBehaviour
         playerHUD.SetHP(playerUnit.currentHP);
         dialougeText.text = "Healed... NOW GIVE IT YOUR ALL!";
 
-        yield return new WaitForSeconds(2f); 
+        yield return new WaitForSeconds(2f);
 
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
@@ -130,7 +134,7 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(EnemyTurn());
     }
 
-    public void OnAttackButton() 
+    public void OnAttackButton()
     {
         if (state != BattleState.PLAYERTURN)
             return;
