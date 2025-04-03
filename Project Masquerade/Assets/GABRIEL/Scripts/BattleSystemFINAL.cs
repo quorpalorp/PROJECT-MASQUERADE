@@ -98,11 +98,11 @@ public class BattleSystemFINAL : MonoBehaviour
     {
         if (state == BattleState.WON)
         {
-            dialougeText.text = "Lovley kill... Player.";
+            dialougeText.text = "get gud bozo";
         }
         else if (state == BattleState.LOST)
         {
-            dialougeText.text = "Get up... Player. GET UP!";
+            dialougeText.text = "HAHAHAHHAHAHH DUMBASS";
         }
     }
 

@@ -8,6 +8,7 @@ public class BattleHUDFINAL : MonoBehaviour
     public Text nameText;
     public Text levelText;
     public Slider hpSlider;
+    public Image healthBar;
 
     public void SetHUD(Unit unit)
     {
@@ -20,5 +21,6 @@ public class BattleHUDFINAL : MonoBehaviour
     public void SetHP(int hp)
     {
         hpSlider.value = hp;
+
     }
 }
