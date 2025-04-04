@@ -15,13 +15,14 @@ public class BattleSystemFINAL : MonoBehaviour
     public Transform PCharacterBattleStation;
     public Transform enemyBattleStation;
 
-    Unit playerUnit;
-    Unit enemyUnit;
+    UnitFINAL playerUnit;
+    UnitFINAL enemyUnit;
 
     public Text dialougeText;
 
-    public BattleHUD playerHUD;
-    public BattleHUD enemyHUD;
+    public BattleHUDFINAL playerHUD;
+    public BattleHUDFINAL enemyHUD;
+    //public BattleHUDTHEFINALS DISSUN;
 
 
     public BattleState state;
@@ -35,9 +36,9 @@ public class BattleSystemFINAL : MonoBehaviour
     IEnumerator SetupBattle()
     {
         GameObject playerGO = Instantiate(PCharacterPrefab, PCharacterBattleStation);
-        playerUnit = playerGO.GetComponent<Unit>();
+        playerUnit = playerGO.GetComponent<UnitFINAL>();
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
-        enemyUnit = enemyGO.GetComponent<Unit>();
+        enemyUnit = enemyGO.GetComponent<UnitFINAL>();
 
         dialougeText.text = enemyUnit.unitName + " Wants to kill you... ";
 
