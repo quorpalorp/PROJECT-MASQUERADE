@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleStateDONTUSE {  START, PLAYERTURN, ENEMYTURN, WON, LOST }
+public enum BattleState {  START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
 public class BattleSystem : MonoBehaviour
 {

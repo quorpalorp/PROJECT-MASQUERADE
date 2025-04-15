@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
+public enum BattleStates { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
 //this is the latest copy of the BattleSystem script by gabriel
 //dont use the one in elias's folder thats outdated
@@ -25,11 +25,11 @@ public class BattleSystemFINAL : MonoBehaviour
     //public BattleHUDTHEFINALS DISSUN;
 
 
-    public BattleState state;
+    public BattleStates state;
 
     void Start()
     {
-        state = BattleState.START;
+        state = BattleStates.START;
         StartCoroutine(SetupBattle());
     }
 
@@ -47,7 +47,7 @@ public class BattleSystemFINAL : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        state = BattleState.PLAYERTURN;
+        state = BattleStates.PLAYERTURN;
         PlayerTurn();
     }
     IEnumerator PlayerAttack()
@@ -60,12 +60,12 @@ public class BattleSystemFINAL : MonoBehaviour
 
         if (isDead)
         {
-            state = BattleState.WON;
+            state = BattleStates.WON;
             EndBattle();
         }
         else
         {
-            state = BattleState.ENEMYTURN;
+            state = BattleStates.ENEMYTURN;
             StartCoroutine(EnemyTurn());
         }
     }
@@ -85,25 +85,25 @@ public class BattleSystemFINAL : MonoBehaviour
 
         if (isDead)
         {
-            state = BattleState.LOST;
+            state = BattleStates.LOST;
             EndBattle();
         }
         else
         {
-            state = BattleState.PLAYERTURN;
+            state = BattleStates.PLAYERTURN;
             PlayerTurn();
         }
     }
 
     void EndBattle()
     {
-        if (state == BattleState.WON)
+        if (state == BattleStates.WON)
         {
-            dialougeText.text = "get gud bozo";
+            dialougeText.text = "Lovley kill... Player.";
         }
-        else if (state == BattleState.LOST)
+        else if (state == BattleStates.LOST)
         {
-            dialougeText.text = "HAHAHAHHAHAHH DUMBASS";
+            dialougeText.text = "Get up... Player. GET UP!";
         }
     }
 
@@ -121,7 +121,7 @@ public class BattleSystemFINAL : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        state = BattleState.ENEMYTURN;
+        state = BattleStates.ENEMYTURN;
         StartCoroutine(EnemyTurn());
     }
 
@@ -131,13 +131,13 @@ public class BattleSystemFINAL : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        state = BattleState.ENEMYTURN;
+        state = BattleStates.ENEMYTURN;
         StartCoroutine(EnemyTurn());
     }
 
     public void OnAttackButton()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleStates.PLAYERTURN)
             return;
 
         StartCoroutine(PlayerAttack());
@@ -145,7 +145,7 @@ public class BattleSystemFINAL : MonoBehaviour
 
     public void OnHealButton()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleStates.PLAYERTURN)
             return;
 
         StartCoroutine(PlayerHeal());
@@ -153,7 +153,7 @@ public class BattleSystemFINAL : MonoBehaviour
 
     public void OnBlockButton()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleStates.PLAYERTURN)
             return;
 
         StartCoroutine(PlayerBlock());

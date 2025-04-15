@@ -96,7 +96,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7031672164734748856}
-  - component: {fileID: 7400745151953741449}
+  - component: {fileID: 4605670065166297593}
   m_Layer: 0
   m_Name: 'Enemy '
   m_TagString: Untagged
@@ -120,7 +120,7 @@ Transform:
   - {fileID: 7298189830851114338}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7400745151953741449
+--- !u!114 &4605670065166297593
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,11 +129,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3722077848626902874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d0423adddbfd644686ff7228ca9abc3, type: 3}
+  m_Script: {fileID: 11500000, guid: 555e153cc8953244ba7c82ab23d004e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Enemy
+  unitName: 'Enemy '
   unitLevel: 2
   damage: 10
   maxHP: 100
   currentHP: 100
+  Defense: 0
