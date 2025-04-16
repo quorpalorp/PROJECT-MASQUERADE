@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: 1a8e9f8665526a6459626ce61fbcdbd1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4277298416717102900
+    second: fight ui 1_0
+  - first:
+      213: -5175402688235402811
+    second: fight ui 1_1
+  - first:
+      213: -1133700973543832748
+    second: fight ui 1_2
+  - first:
+      213: 3435859631203396413
+    second: fight ui 1_3
+  - first:
+      213: 4946486500221974541
+    second: fight ui 1_4
+  - first:
+      213: -2664541805689108860
+    second: fight ui 1_5
+  - first:
+      213: 5254753995673372143
+    second: fight ui 1_6
+  - first:
+      213: 1908903515431477862
+    second: fight ui 1_7
+  - first:
+      213: -2121220083551975359
+    second: fight ui 1_8
+  - first:
+      213: 4192658829745601474
+    second: fight ui 1_9
+  - first:
+      213: 3084394145185596150
+    second: fight ui 1_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: healthfill
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 433
+        height: 2488
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f73c67f340c5b30800000000000000
+      internalID: 4277298416717102900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: healthback
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 0
+        width: 433
+        height: 2488
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9802eeca64d28b0800000000000000
+      internalID: -5175402688235402811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: apback
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 1343
+        width: 1122
+        height: 1145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 453c76e98f84440f0800000000000000
+      internalID: -1133700973543832748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: apfill
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 1343
+        width: 1122
+        height: 1145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3babff6120aeaf20800000000000000
+      internalID: 3435859631203396413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: edgeback
+      rect:
+        serializedVersion: 2
+        x: 3734
+        y: 1883
+        width: 324
+        height: 591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d08fefba34375a440800000000000000
+      internalID: 4946486500221974541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silverback gorilla
+      rect:
+        serializedVersion: 2
+        x: 4135
+        y: 1883
+        width: 324
+        height: 591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48609b65855a50bd0800000000000000
+      internalID: -2664541805689108860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnback
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 637
+        width: 1088
+        height: 638
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe50d2e0be2ace840800000000000000
+      internalID: 5254753995673372143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maskfill
+      rect:
+        serializedVersion: 2
+        x: 3686
+        y: 1243
+        width: 759
+        height: 603
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 662a9cb22a9cd7a10800000000000000
+      internalID: 1908903515431477862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maskback
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 652
+        width: 766
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 148c57d9299ef82e0800000000000000
+      internalID: -2121220083551975359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turnout
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 0
+        width: 1088
+        height: 638
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb3463fdf05f2a30800000000000000
+      internalID: 4192658829745601474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maskout
+      rect:
+        serializedVersion: 2
+        x: 3544
+        y: 0
+        width: 853
+        height: 615
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f2051b1228fdca20800000000000000
+      internalID: 3084394145185596150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: healthout
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 0
+        width: 433
+        height: 2488
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adddc6f58848f3a4495749d6e0dd0a50
+      internalID: -1458193024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: apout
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 0
+        width: 1122
+        height: 1340
+      alignment: 9
+      pivot: {x: 0.5000003, y: 0.42945096}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4fbf58feed59e4eb879833c973b9d4
+      internalID: -1360514654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0946864465466074a863b58caad899bc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      apback: -1133700973543832748
+      apfill: 3435859631203396413
+      apout: -1360514654
+      edgeback: 4946486500221974541
+      healthback: -5175402688235402811
+      healthfill: 4277298416717102900
+      healthout: -1458193024
+      maskback: -2121220083551975359
+      maskfill: 1908903515431477862
+      maskout: 3084394145185596150
+      silverback gorilla: -2664541805689108860
+      turnback: 5254753995673372143
+      turnout: 4192658829745601474
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
