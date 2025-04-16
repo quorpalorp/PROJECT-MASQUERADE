@@ -8,21 +8,25 @@ public class BattleHUDFINAL : MonoBehaviour
 
     public Text nameText;
     public Text levelText;
-    public Slider hpSlider;
-    public Image healthBar;
+    public Image Healthbar;
 
     public void SetHUD(UnitFINAL unit)
     {
         nameText.text = unit.unitName;
         levelText.text = "Lvl " + unit.unitLevel;
-        hpSlider.maxValue = unit.maxHP;
-        hpSlider.value = unit.currentHP;
-        healthBar.fillAmount = unit.currentHP / unit.maxHP;
+        Healthbar.fillAmount = unit.maxHP;
+        Healthbar.fillAmount = unit.currentHP;
     }
 
-    public void SetHP(int hp)
+    public void SetHP(int fillamount)
     {
-        hpSlider.value = hp;
-        healthBar.fillAmount = hp;
+        Healthbar.fillAmount = fillamount;
     }
-}
+} 
+      
+        
+     
+
+
+
+
