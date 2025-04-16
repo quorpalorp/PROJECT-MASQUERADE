@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5bee11c5d4e4c89438ef3af96ac0a065
+guid: 215e3164434971d43993b97834f929a6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5185649437945853404
-    second: health_0
+      213: -4630575981579083560
+    second: Overworld Concept 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: health_0
+      name: Overworld Concept 2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1
-        height: 1
+        width: 2100
+        height: 1500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42a88899f4fd808b0800000000000000
-      internalID: -5185649437945853404
+      spriteID: 8d0e588bda3ecbfb0800000000000000
+      internalID: -4630575981579083560
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      health_0: -5185649437945853404
+      Overworld Concept 2_0: -4630575981579083560
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
