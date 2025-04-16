@@ -10,12 +10,26 @@ public class MainMenuControler : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void Option()
+    public void Credits()
     {
         OptionPanel.alpha = 1;
         OptionPanel.blocksRaycasts = true;
     }
-
+    public void Isaiah()
+    {
+        OptionPanel.alpha = 2;
+        OptionPanel.blocksRaycasts = true;
+    }
+    public void Gabriel()
+    {
+        OptionPanel.alpha = 3;
+        OptionPanel.blocksRaycasts = true;
+    }
+    public void Elias()
+    {
+        OptionPanel.alpha = 4;
+        OptionPanel.blocksRaycasts = true;
+    }
     public void Back()
     {
         OptionPanel.alpha = 0;
