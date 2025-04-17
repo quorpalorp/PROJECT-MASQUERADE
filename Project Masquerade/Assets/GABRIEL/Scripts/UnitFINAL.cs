@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UnitFINAL : MonoBehaviour
 {
@@ -28,9 +29,9 @@ public class UnitFINAL : MonoBehaviour
             return false;
     }
 
-    public void Heal(int amount)
+    public void Heal(int fillAmount)
     {
-        currentHP += amount;
+        currentHP += fillAmount;
         if (currentHP > maxHP)
             currentHP = maxHP;
     }
