@@ -40,7 +40,7 @@ public class BattleSystemFINAL : MonoBehaviour
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
         enemyUnit = enemyGO.GetComponent<UnitFINAL>();
 
-        dialougeText.text = enemyUnit.unitName + " Wants to kill you... ";
+        dialougeText.text = enemyUnit.unitName + "Wants to kill you... ";
 
         playerHUD.SetHUD(playerUnit);
         enemyHUD.SetHUD(enemyUnit);
@@ -72,7 +72,7 @@ public class BattleSystemFINAL : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
-        dialougeText.text = enemyUnit.unitName + " Turn to attack... ";
+        dialougeText.text = enemyUnit.unitName + "Turn to attack... ";
 
         yield return new WaitForSeconds(1f);
 
