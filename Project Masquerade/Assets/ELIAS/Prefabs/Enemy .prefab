@@ -135,6 +135,6 @@ MonoBehaviour:
   unitName: 'Enemy '
   unitLevel: 2
   damage: 10
-  maxHP: 1
-  currentHP: 1
+  maxHP: 100
+  currentHP: 100
   Defense: 0
