@@ -78,39 +78,57 @@ public class BattleSystemFINAL : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+        int choice = Random.Range(0, 3);
 
-        playerHUD.SetHP(playerUnit.currentHP);
-        playerUnit.ResetDefense();
-
-        yield return new WaitForSeconds(1f);
-
-        if (isDead)
+        if (choice == 0) //attack
         {
-            state = BattleStates.LOST;
-            EndBattle();
+            bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+
+            dialougeText.text = enemyUnit.unitName + "Has thrown an attack! ";
+
+            playerHUD.SetHP(playerUnit.currentHP);
+            playerUnit.ResetDefense();
+
+            yield return new WaitForSeconds(1f);
+
+            if (isDead)
+            {
+                state = BattleStates.LOST;
+                EndBattle();
+            }
+            else
+            {
+                state = BattleStates.PLAYERTURN;
+                PlayerTurn();
+            }
         }
-        else
+        else if (choice == 1) //heal
+        { 
+            IEnumerator EnemyHeal()
+            {
+                enemyUnit.Heal(50);
+
+                enemyHUD.SetHP(enemyUnit.currentHP);
+                dialougeText.text = "Enemy has healed...";
+
+                yield return new WaitForSeconds(2f);
+
+                state = BattleStates.PLAYERTURN;
+                PlayerTurn();
+            }
+        }
+        else if (choice == 2) //block
         {
-            state = BattleStates.PLAYERTURN;
-            PlayerTurn();
+            IEnumerator EnemyBlock()
+            {
+                enemyUnit.setdefense();
+
+                yield return new WaitForSeconds(1f);
+
+                state = BattleStates.PLAYERTURN;
+                PlayerTurn();
+            }
         }
-    }
-
-    IEnumerator EnemyHeal()
-    {
-
-        enemyUnit.Heal(50);
-
-        enemyHUD.SetHP(enemyUnit.currentHP);
-        dialougeText.text = "Enemy Healed...";
-
-        yield return new WaitForSeconds(2f);
-
-        state = BattleStates.PLAYERTURN;
-        PlayerTurn();
-
-        Debug.Log("healed"); 
     }
 
     void EndBattle()
