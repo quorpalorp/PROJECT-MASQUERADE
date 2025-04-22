@@ -3,7 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuControler : MonoBehaviour
 {
-    public CanvasGroup OptionPanel;
+    public GameObject OptionPanel;
+    public GameObject IsaiahPanel;
+    public GameObject GabrielPanel;
+    public GameObject EliasPanel;
 
     public void PlayGame()
     {
@@ -12,28 +15,38 @@ public class MainMenuControler : MonoBehaviour
 
     public void Credits()
     {
-        OptionPanel.alpha = 1;
-        OptionPanel.blocksRaycasts = true;
+        OptionPanel.gameObject.SetActive(true);
+        IsaiahPanel.gameObject.SetActive(false);
+        GabrielPanel.gameObject.SetActive(false);
+        EliasPanel.gameObject.SetActive(false);
     }
     public void Isaiah()
     {
-        OptionPanel.alpha = 2;
-        OptionPanel.blocksRaycasts = true;
+        OptionPanel.gameObject.SetActive(false);
+        IsaiahPanel.gameObject.SetActive(true);
+        GabrielPanel.gameObject.SetActive(false);
+        EliasPanel.gameObject.SetActive(false);
     }
     public void Gabriel()
     {
-        OptionPanel.alpha = 3;
-        OptionPanel.blocksRaycasts = true;
+        OptionPanel.gameObject.SetActive(false);
+        IsaiahPanel.gameObject.SetActive(false);
+        GabrielPanel.gameObject.SetActive(true);
+        EliasPanel.gameObject.SetActive(false);
     }
     public void Elias()
     {
-        OptionPanel.alpha = 4;
-        OptionPanel.blocksRaycasts = true;
+        OptionPanel.gameObject.SetActive(false);
+        IsaiahPanel.gameObject.SetActive(false);
+        GabrielPanel.gameObject.SetActive(false);
+        EliasPanel.gameObject.SetActive(true);
     }
     public void Back()
     {
-        OptionPanel.alpha = 0;
-        OptionPanel.blocksRaycasts = false;
+        OptionPanel.gameObject.SetActive(false);
+        IsaiahPanel.gameObject.SetActive(false);
+        GabrielPanel.gameObject.SetActive(false);
+        EliasPanel.gameObject.SetActive(false);
     }
 
     public void QuitGame()
