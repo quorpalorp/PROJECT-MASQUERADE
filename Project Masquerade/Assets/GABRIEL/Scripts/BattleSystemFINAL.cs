@@ -1,4 +1,6 @@
 using System.Collections;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -93,6 +95,22 @@ public class BattleSystemFINAL : MonoBehaviour
             state = BattleStates.PLAYERTURN;
             PlayerTurn();
         }
+    }
+
+    IEnumerator EnemyHeal()
+    {
+
+        enemyUnit.Heal(50);
+
+        enemyHUD.SetHP(enemyUnit.currentHP);
+        dialougeText.text = "Enemy Healed...";
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleStates.PLAYERTURN;
+        PlayerTurn();
+
+        Debug.Log("healed"); 
     }
 
     void EndBattle()
