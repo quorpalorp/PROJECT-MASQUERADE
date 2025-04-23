@@ -44,7 +44,7 @@ public class UnitFINAL : MonoBehaviour
         Defense -= actualBlock;
     }
 
-    public void setdefense()
+    public void Setdefense()
     {
         cantakedamage = false;
     }

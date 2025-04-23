@@ -58,7 +58,7 @@ public class BattleSystemFINAL : MonoBehaviour
 
         enemyHUD.SetHP(enemyUnit.currentHP);
         dialougeText.text = "Nice attack... Player.";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2f);     
 
         if (isDead)
         {
@@ -74,10 +74,10 @@ public class BattleSystemFINAL : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
-        dialougeText.text = enemyUnit.unitName + "Turn to attack... ";
+        dialougeText.text = enemyUnit.unitName + "Turn to attack... "; 
 
         yield return new WaitForSeconds(1f);
-
+         
         int choice = Random.Range(0, 3);
 
         if (choice == 0) //attack
@@ -104,12 +104,12 @@ public class BattleSystemFINAL : MonoBehaviour
         }
         else if (choice == 1) //heal
         { 
-            IEnumerator EnemyHeal()
+            IEnumerator EnemyHeal() 
             {
                 enemyUnit.Heal(50);
 
                 enemyHUD.SetHP(enemyUnit.currentHP);
-                dialougeText.text = "Enemy has healed...";
+                dialougeText.text = enemyUnit.unitName + "Has healed... ";
 
                 yield return new WaitForSeconds(2f);
 
@@ -121,7 +121,8 @@ public class BattleSystemFINAL : MonoBehaviour
         {
             IEnumerator EnemyBlock()
             {
-                enemyUnit.setdefense();
+                enemyUnit.Setdefense();
+                dialougeText.text = enemyUnit.unitName + "Is Defending... ";
 
                 yield return new WaitForSeconds(1f);
 
@@ -139,13 +140,13 @@ public class BattleSystemFINAL : MonoBehaviour
         }
         else if (state == BattleStates.LOST)
         {
-            dialougeText.text = "Get up... Player. GET UP!";
+            dialougeText.text = "Get up... Player. GET UP!"; 
         }
     }
 
     void PlayerTurn()
     {
-        dialougeText.text = "It's Your Turn... Player.";
+        dialougeText.text = "It's Your Turn... Player."; 
     }
 
     IEnumerator PlayerHeal()
@@ -163,7 +164,7 @@ public class BattleSystemFINAL : MonoBehaviour
 
     IEnumerator PlayerBlock()
     {
-        playerUnit.setdefense();
+        playerUnit.Setdefense();
 
         yield return new WaitForSeconds(1f);
 
