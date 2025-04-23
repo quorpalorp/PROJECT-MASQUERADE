@@ -13,6 +13,8 @@ public class UnitFINAL : MonoBehaviour
     public int maxHP;
     public int currentHP;
     public int Defense;
+    public int maxAP;
+    public int currentAP;
 
     private bool cantakedamage = true;
 
