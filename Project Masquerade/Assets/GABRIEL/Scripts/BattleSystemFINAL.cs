@@ -11,10 +11,10 @@ public enum BattleStates { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystemFINAL : MonoBehaviour
 {
 
-    public GameObject PCharacterPrefab;
-    public GameObject enemyPrefab;
+    public GameObject Player;
+    public GameObject Enemy;
 
-    public Transform PCharacterBattleStation;
+    public Transform PlayerBattleStation;
     public Transform enemyBattleStation;
 
     UnitFINAL playerUnit;
@@ -37,12 +37,12 @@ public class BattleSystemFINAL : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
-        GameObject playerGO = Instantiate(PCharacterPrefab, PCharacterBattleStation);
+        GameObject playerGO = Instantiate(Player, PlayerBattleStation);
         playerUnit = playerGO.GetComponent<UnitFINAL>();
-        GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
+        GameObject enemyGO = Instantiate(Enemy, enemyBattleStation);
         enemyUnit = enemyGO.GetComponent<UnitFINAL>();
 
-        dialougeText.text = enemyUnit.unitName + "Wants to kill you... ";
+        dialougeText.text = enemyUnit.unitName + " Wants to kill you... ";
 
         playerHUD.SetHUD(playerUnit);
         enemyHUD.SetHUD(enemyUnit);
@@ -57,6 +57,7 @@ public class BattleSystemFINAL : MonoBehaviour
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
 
         enemyHUD.SetHP(enemyUnit.currentHP);
+        enemyUnit.ResetDefense();
         dialougeText.text = "Nice attack... Player.";
         yield return new WaitForSeconds(2f);     
 
@@ -74,22 +75,22 @@ public class BattleSystemFINAL : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
-        dialougeText.text = enemyUnit.unitName + "Turn to attack... "; 
+        dialougeText.text = enemyUnit.unitName + " Is Choosing... "; 
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
          
-        int choice = Random.Range(0, 3);
+        int choice = Random.Range(1, 4);
 
-        if (choice == 0) //attack
+        if (choice == 1) //attack
         {
             bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
 
-            dialougeText.text = enemyUnit.unitName + "Has thrown an attack! ";
+            dialougeText.text = enemyUnit.unitName + " Has thrown an attack! ";
 
             playerHUD.SetHP(playerUnit.currentHP);
             playerUnit.ResetDefense();
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
 
             if (isDead)
             {
@@ -102,33 +103,28 @@ public class BattleSystemFINAL : MonoBehaviour
                 PlayerTurn();
             }
         }
-        else if (choice == 1) //heal
+        else if (choice == 2) //heal
         { 
-            IEnumerator EnemyHeal() 
-            {
-                enemyUnit.Heal(50);
+            enemyUnit.Heal(5);
 
-                enemyHUD.SetHP(enemyUnit.currentHP);
-                dialougeText.text = enemyUnit.unitName + "Has healed... ";
+            enemyHUD.SetHP(enemyUnit.currentHP);
+            dialougeText.text = enemyUnit.unitName + " Has healed... ";
 
-                yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(2f);
 
-                state = BattleStates.PLAYERTURN;
-                PlayerTurn();
-            }
+            state = BattleStates.PLAYERTURN;
+            PlayerTurn();
+            
         }
-        else if (choice == 2) //block
+        else if (choice == 3) //block
         {
-            IEnumerator EnemyBlock()
-            {
-                enemyUnit.Setdefense();
-                dialougeText.text = enemyUnit.unitName + "Is Defending... ";
+            enemyUnit.Setdefense();
+            dialougeText.text = enemyUnit.unitName + " Is Blocking... ";
 
-                yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
 
-                state = BattleStates.PLAYERTURN;
-                PlayerTurn();
-            }
+            state = BattleStates.PLAYERTURN;
+            PlayerTurn();  
         }
     }
 
@@ -151,10 +147,10 @@ public class BattleSystemFINAL : MonoBehaviour
 
     IEnumerator PlayerHeal()
     {
-        playerUnit.Heal(50);
+        playerUnit.Heal(5);
 
         playerHUD.SetHP(playerUnit.currentHP);
-        dialougeText.text = "Healed... NOW GIVE IT YOUR ALL!";
+        dialougeText.text = "Player Healed... NOW GIVE IT YOUR ALL!";
 
         yield return new WaitForSeconds(2f);
 
@@ -165,8 +161,9 @@ public class BattleSystemFINAL : MonoBehaviour
     IEnumerator PlayerBlock()
     {
         playerUnit.Setdefense();
+        dialougeText.text = "Player Is Blocking...";
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         state = BattleStates.ENEMYTURN;
         StartCoroutine(EnemyTurn());

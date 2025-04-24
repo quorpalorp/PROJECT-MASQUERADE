@@ -10,13 +10,19 @@ public class UnitFINAL : MonoBehaviour
 
     public int damage;
 
-    public int maxHP;
-    public int currentHP;
+    public int maxHP = 100;
+    public int currentHP = 100;
     public int Defense;
     public int maxAP;
     public int currentAP;
+    public Image healthBarImage;
 
     private bool cantakedamage = true;
+
+    void Update()
+    {
+        healthBarImage.fillAmount = (float)currentHP / (float)maxHP;
+    }
 
     public bool TakeDamage(int dmg)
     {
