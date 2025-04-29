@@ -138,3 +138,5 @@ MonoBehaviour:
   maxHP: 100
   currentHP: 100
   Defense: 0
+  maxAP: 3
+  currentAP: 3
