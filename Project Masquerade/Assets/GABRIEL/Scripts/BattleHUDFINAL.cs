@@ -9,6 +9,7 @@ public class BattleHUDFINAL : MonoBehaviour
     public Text nameText;
     public Text levelText;
     public Image Healthbar;
+    public Image APbar;
 
     public void SetHUD(UnitFINAL unit)
     {
@@ -21,6 +22,11 @@ public class BattleHUDFINAL : MonoBehaviour
     public void SetHP(int fillamount)
     {
         Healthbar.fillAmount = fillamount;
+    }
+
+    public void setAP(int apFill)
+    {
+        APbar.fillAmount = apFill;
     }
 } 
       
