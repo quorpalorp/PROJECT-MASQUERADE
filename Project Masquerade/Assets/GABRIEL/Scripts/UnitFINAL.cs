@@ -9,11 +9,16 @@ public class UnitFINAL : MonoBehaviour
     public int unitLevel;
 
     public int damage;
+    public int damageCost;
+    public int heal;
+    public int healCost;
+    //public int block;
+    //public int bleed;
 
     public int maxHP = 100;
     public int currentHP = 100;
     public int Defense;
-    public int maxAP;
+    public int maxAP = 3;
     public int currentAP;
     public Image healthBarImage;
 
@@ -59,4 +64,5 @@ public class UnitFINAL : MonoBehaviour
     {
         cantakedamage = true;
     }
+
 }

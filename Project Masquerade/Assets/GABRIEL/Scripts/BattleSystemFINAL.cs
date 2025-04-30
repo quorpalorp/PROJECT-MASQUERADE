@@ -55,6 +55,7 @@ public class BattleSystemFINAL : MonoBehaviour
     IEnumerator PlayerAttack()
     {
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        playerUnit.currentAP = playerUnit.currentAP - playerUnit.damageCost;
 
         enemyHUD.SetHP(enemyUnit.currentHP);
         enemyUnit.ResetDefense();
@@ -136,7 +137,7 @@ public class BattleSystemFINAL : MonoBehaviour
         }
         else if (state == BattleStates.LOST)
         {
-            dialougeText.text = "Get up... Player. GET UP!"; 
+            dialougeText.text = "hehe get gud bozo"; 
         }
     }
 
@@ -147,8 +148,8 @@ public class BattleSystemFINAL : MonoBehaviour
 
     IEnumerator PlayerHeal()
     {
-        playerUnit.Heal(5);
-
+        playerUnit.Heal(playerUnit.heal);
+        playerUnit.currentAP = playerUnit.currentAP - playerUnit.healCost;
         playerHUD.SetHP(playerUnit.currentHP);
         dialougeText.text = "Player Healed... NOW GIVE IT YOUR ALL!";
 
