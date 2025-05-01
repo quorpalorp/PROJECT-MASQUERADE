@@ -21,12 +21,16 @@ public class UnitFINAL : MonoBehaviour
     public int maxAP = 3;
     public int currentAP;
     public Image healthBarImage;
+    public bool isEnemy; //disabled - player , enabled - enemy
 
     private bool cantakedamage = true;
 
     void Update()
     {
-        healthBarImage.fillAmount = (float)currentHP / (float)maxHP;
+        if (isEnemy == false)
+            healthBarImage.fillAmount = (float)currentHP / (float)maxHP;
+        else
+            healthBarImage.fillAmount = (float)currentHP / (float)maxHP;        
     }
 
     public bool TakeDamage(int dmg)
