@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 22362075}
   m_Layer: 5
   m_Name: health
-  m_TagString: Untagged
+  m_TagString: player health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -484,6 +484,7 @@ RectTransform:
   - {fileID: 1373848964}
   - {fileID: 1098282440}
   - {fileID: 1907778714}
+  - {fileID: 256871269}
   - {fileID: 2119988752}
   - {fileID: 727993747}
   - {fileID: 367810527}
@@ -914,16 +915,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256871268}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.3492324}
   m_LocalScale: {x: 2.56, y: 2.56, z: 2.56}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1098282440}
+  m_Father: {fileID: 48608621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -914, y: 11}
+  m_AnchoredPosition: {x: -895.2083, y: -5.9019394}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &256871270
@@ -3369,7 +3370,7 @@ GameObject:
   - component: {fileID: 915687505}
   m_Layer: 5
   m_Name: health (1)
-  m_TagString: Untagged
+  m_TagString: enemy health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4041,7 +4042,6 @@ Transform:
   - {fileID: 915687505}
   - {fileID: 474736529}
   - {fileID: 697890969}
-  - {fileID: 256871269}
   m_Father: {fileID: 48608621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1098282441
@@ -4631,7 +4631,7 @@ MonoBehaviour:
   nameText: {fileID: 1869358965}
   levelText: {fileID: 2071356610}
   Healthbar: {fileID: 1429232516}
-  APbar: {fileID: 0}
+  APbar: {fileID: 114401334}
 --- !u!1 &1429232514
 GameObject:
   m_ObjectHideFlags: 0
@@ -5513,7 +5513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -355, y: 70}
+  m_AnchoredPosition: {x: -839, y: -403}
   m_SizeDelta: {x: 183.5701, y: 57.4985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1869358965
