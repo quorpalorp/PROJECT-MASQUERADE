@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e80d0c7597bd86c4484dbc7913ab5983
+guid: f0dd6cdcd8575cb498f72abfed546f01
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4215193464751990602
-    second: credits background_0
+      213: 7141765067525904753
+    second: Untitled design (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: credits background_0
+      name: Untitled design (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2100
-        height: 1500
+        x: 307
+        y: 26
+        width: 620
+        height: 1531
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b8d8e970ef9085c0800000000000000
-      internalID: -4215193464751990602
+      spriteID: 179dc2f7d75ac1360800000000000000
+      internalID: 7141765067525904753
       vertices: []
       indices: 
       edges: []
@@ -161,11 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<< HEAD:Project Masquerade/Assets/ELIAS/Art/Solid_black.png.meta
-      Solid_black_0: 1451598668254842067
-=======
-      credits background_0: -4215193464751990602
->>>>>>> 61097a63c4b573bb5db46a268af917189456acc8:Project Masquerade/Assets/ISAIAH/credits background.png.meta
+      Untitled design (1)_0: 7141765067525904753
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
