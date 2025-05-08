@@ -2,6 +2,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum BattleStates { START, PLAYERTURN, ENEMYTURN, WON, LOST }
@@ -133,6 +134,7 @@ public class BattleSystemFINAL : MonoBehaviour
     {
         if (state == BattleStates.WON)
         {
+            SceneManager.LoadScene("yay");
             dialougeText.text = "Lovley kill... Player.";
         }
         else if (state == BattleStates.LOST)

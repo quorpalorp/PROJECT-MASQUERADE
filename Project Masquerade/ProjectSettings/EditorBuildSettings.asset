@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ELIAS/Scenes/Map&Movment.unity
     guid: 8043d819a5abbc84e9669a411ba0daf9
+  - enabled: 1
+    path: Assets/GABRIEL/Scenes/combat test 2 electric boogaloo.unity
+    guid: 1052c6884eb5f7a45b626f1ec5ac1808
+  - enabled: 1
+    path: Assets/GABRIEL/Scenes/yay.unity
+    guid: d52fd62642a8dba40bfb1c2d7b59e6c3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

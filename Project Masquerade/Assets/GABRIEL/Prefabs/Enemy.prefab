@@ -135,8 +135,13 @@ MonoBehaviour:
   unitName: Enemy
   unitLevel: 2
   damage: 10
+  damageCost: 0
+  heal: 0
+  healCost: 0
   maxHP: 100
   currentHP: 100
   Defense: 0
   maxAP: 3
   currentAP: 3
+  healthBarImage: {fileID: 0}
+  isEnemy: 1

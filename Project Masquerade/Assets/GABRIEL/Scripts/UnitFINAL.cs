@@ -25,13 +25,18 @@ public class UnitFINAL : MonoBehaviour
 
     private bool cantakedamage = true;
 
-    void Update()
+    private void Start()
     {
         if (isEnemy == false)
-            healthBarImage.fillAmount = (float)currentHP / (float)maxHP;
+            healthBarImage = GameObject.FindGameObjectWithTag("player health").GetComponent<Image>();
         else
-            healthBarImage.fillAmount = (float)currentHP / (float)maxHP;        
+            healthBarImage = GameObject.FindGameObjectWithTag("enemy health").GetComponent<Image>();
     }
+
+    void Update()
+    {
+            healthBarImage.fillAmount = (float)currentHP / (float)maxHP;
+            }
 
     public bool TakeDamage(int dmg)
     {

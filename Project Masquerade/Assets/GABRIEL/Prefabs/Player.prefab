@@ -134,9 +134,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Player
   unitLevel: 2
-  damage: 10
+  damage: 30
+  damageCost: 0
+  heal: 20
+  healCost: 0
   maxHP: 100
   currentHP: 100
   Defense: 0
   maxAP: 3
   currentAP: 3
+  healthBarImage: {fileID: 0}
+  isEnemy: 0
