@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 323110885eef63948a64460f72faa19d
+guid: 948b8d60757868d409fa78fd26440a79
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8040015406462267123
-    second: yay_0
+      213: -5236003035174605091
+    second: yay 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: yay_0
+      name: yay 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d01162de5902c6090800000000000000
-      internalID: -8040015406462267123
+      spriteID: ddeec852bfaf557b0800000000000000
+      internalID: -5236003035174605091
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      yay_0: -8040015406462267123
+      yay 1_0: -5236003035174605091
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
