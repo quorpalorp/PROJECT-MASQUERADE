@@ -1,6 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -43,7 +41,7 @@ public class BattleSystemFINAL : MonoBehaviour
         GameObject enemyGO = Instantiate(Enemy, enemyBattleStation);
         enemyUnit = enemyGO.GetComponent<UnitFINAL>();
 
-        dialougeText.text = enemyUnit.unitName + " Wants to kill you... ";
+        dialougeText.text = "A bandit attacks!";
 
         playerHUD.SetHUD(playerUnit);
         enemyHUD.SetHUD(enemyUnit);
@@ -60,7 +58,7 @@ public class BattleSystemFINAL : MonoBehaviour
 
         enemyHUD.SetHP(enemyUnit.currentHP);
         enemyUnit.ResetDefense();
-        dialougeText.text = "Nice attack... Player.";
+        dialougeText.text = "BANG! (pretend there's a gun animation)";
         yield return new WaitForSeconds(2f);     
 
         if (isDead)
@@ -77,7 +75,7 @@ public class BattleSystemFINAL : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
-        dialougeText.text = enemyUnit.unitName + " Is Choosing... "; 
+        dialougeText.text = "Waiting for turn..."; 
 
         yield return new WaitForSeconds(2f);
          
@@ -87,7 +85,7 @@ public class BattleSystemFINAL : MonoBehaviour
         {
             bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
 
-            dialougeText.text = enemyUnit.unitName + " Has thrown an attack! ";
+            dialougeText.text = "BANG!";
 
             playerHUD.SetHP(playerUnit.currentHP);
             playerUnit.ResetDefense();
@@ -110,7 +108,7 @@ public class BattleSystemFINAL : MonoBehaviour
             enemyUnit.Heal(5);
 
             enemyHUD.SetHP(enemyUnit.currentHP);
-            dialougeText.text = enemyUnit.unitName + " Has healed... ";
+            dialougeText.text = "The bandit heals up!";
 
             yield return new WaitForSeconds(2f);
 
@@ -121,7 +119,7 @@ public class BattleSystemFINAL : MonoBehaviour
         else if (choice == 3) //block
         {
             enemyUnit.Setdefense();
-            dialougeText.text = enemyUnit.unitName + " Is Blocking... ";
+            dialougeText.text = "The bandit blocks!";
 
             yield return new WaitForSeconds(2f);
 
@@ -135,7 +133,7 @@ public class BattleSystemFINAL : MonoBehaviour
         if (state == BattleStates.WON)
         {
             SceneManager.LoadScene("yay");
-            dialougeText.text = "Lovley kill... Player.";
+            dialougeText.text = "congrats you killed a guy";
         }
         else if (state == BattleStates.LOST)
         {
@@ -145,7 +143,7 @@ public class BattleSystemFINAL : MonoBehaviour
 
     void PlayerTurn()
     {
-        dialougeText.text = "It's Your Turn... Player."; 
+        dialougeText.text = "Make a move..."; 
     }
 
     IEnumerator PlayerHeal()
@@ -153,7 +151,7 @@ public class BattleSystemFINAL : MonoBehaviour
         playerUnit.Heal(playerUnit.heal);
         playerUnit.currentAP = playerUnit.currentAP - playerUnit.healCost;
         playerHUD.SetHP(playerUnit.currentHP);
-        dialougeText.text = "Player Healed... NOW GIVE IT YOUR ALL!";
+        dialougeText.text = "You healed up!";
 
         yield return new WaitForSeconds(2f);
 
@@ -164,7 +162,7 @@ public class BattleSystemFINAL : MonoBehaviour
     IEnumerator PlayerBlock()
     {
         playerUnit.Setdefense();
-        dialougeText.text = "Player Is Blocking...";
+        dialougeText.text = "You block!";
 
         yield return new WaitForSeconds(2f);
 

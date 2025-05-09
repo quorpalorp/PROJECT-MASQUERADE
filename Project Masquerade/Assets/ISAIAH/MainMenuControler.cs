@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuControler : MonoBehaviour
 {
+    public string playGame;
     public GameObject OptionPanel;
     public GameObject IsaiahPanel;
     public GameObject GabrielPanel;
@@ -10,7 +11,8 @@ public class MainMenuControler : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(playGame);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Credits()

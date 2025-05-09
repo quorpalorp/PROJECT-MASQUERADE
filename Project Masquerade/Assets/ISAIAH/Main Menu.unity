@@ -3464,7 +3464,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1411283284057785138, guid: 415d7e26d7deaa142886e2914dedeb45, type: 3}
+  m_Sprite: {fileID: -162142502763699333, guid: 38721193f7ad29141bf7fc420f0f2947, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3740,6 +3740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575fa4d43e7b3e4419a45a4e088b41c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playGame: combat test 2 electric boogaloo
   OptionPanel: {fileID: 1633340134}
   IsaiahPanel: {fileID: 1072999977}
   GabrielPanel: {fileID: 1708371120}
@@ -3966,7 +3967,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1411283284057785138, guid: 415d7e26d7deaa142886e2914dedeb45, type: 3}
+  m_Sprite: {fileID: 7885667479363113886, guid: c8f45cacc3ee1e14eb3e82e9cbac0512, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
